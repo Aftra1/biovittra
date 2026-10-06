@@ -195,13 +195,9 @@
         }
         
         .about-image {
-            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+            width: 100%;
             height: 400px;
             border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 150px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
         
@@ -269,11 +265,14 @@
         .product-image {
             width: 100%;
             height: 250px;
-            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 80px;
+        }
+        
+        .product-image svg {
+            width: 100%;
+            height: 100%;
         }
         
         .product-content {
@@ -537,7 +536,20 @@
         <div class="container">
             <h2>À propos de Biovittra</h2>
             <div class="about-grid">
-                <div class="about-image">🏥</div>
+                <svg class="about-image" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect width="400" height="400" fill="url(#grad1)"/>
+                    <circle cx="200" cy="120" r="50" fill="#ffffff" opacity="0.2"/>
+                    <rect x="120" y="200" width="160" height="120" rx="20" fill="#ffffff" opacity="0.1"/>
+                    <circle cx="160" cy="260" r="35" fill="#ffffff" opacity="0.15"/>
+                    <circle cx="240" cy="280" r="40" fill="#ffffff" opacity="0.12"/>
+                    <text x="200" y="240" font-size="80" text-anchor="middle" fill="#ffffff">⚕️</text>
+                </svg>
                 <div class="about-text">
                     <h3>Pionniers de l'Innovation Orthopédique</h3>
                     <p>Depuis 2010, Biovittra s'engage à développer des solutions orthopédiques de pointe qui transforment la vie de nos patients. Notre équipe multidisciplinaire associe ingénieurs biomédicaux, médecins et technologues pour créer des prothèses révolutionnaires.</p>
@@ -569,7 +581,24 @@
             <div class="products-grid">
                 <!-- Prothèse de Jambe -->
                 <div class="product-card">
-                    <div class="product-image">🦵</div>
+                    <div class="product-image">
+                        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="legGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#dbeafe;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#93c5fd;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="300" height="300" fill="url(#legGrad)"/>
+                            <circle cx="150" cy="60" r="30" fill="#1e40af" opacity="0.3"/>
+                            <path d="M 150 90 Q 140 150 130 220" stroke="#1e40af" stroke-width="35" fill="none" stroke-linecap="round"/>
+                            <path d="M 150 90 Q 160 150 170 220" stroke="#3b82f6" stroke-width="35" fill="none" stroke-linecap="round"/>
+                            <circle cx="130" cy="240" r="25" fill="#1e40af"/>
+                            <circle cx="170" cy="240" r="25" fill="#1e40af"/>
+                            <circle cx="130" cy="240" r="15" fill="#60a5fa"/>
+                            <circle cx="170" cy="240" r="15" fill="#60a5fa"/>
+                        </svg>
+                    </div>
                     <div class="product-content">
                         <h3>Prothèse de Jambe Avancée</h3>
                         <p>Technologie biomécanique dernière génération pour une marche naturelle et fluide.</p>
@@ -584,7 +613,23 @@
                 
                 <!-- Prothèse de Bras -->
                 <div class="product-card">
-                    <div class="product-image">💪</div>
+                    <div class="product-image">
+                        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="armGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#dbeafe;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#93c5fd;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="300" height="300" fill="url(#armGrad)"/>
+                            <circle cx="80" cy="80" r="35" fill="#1e40af" opacity="0.3"/>
+                            <path d="M 120 100 Q 180 120 240 80" stroke="#1e40af" stroke-width="32" fill="none" stroke-linecap="round"/>
+                            <path d="M 120 100 Q 180 140 240 160" stroke="#3b82f6" stroke-width="32" fill="none" stroke-linecap="round"/>
+                            <circle cx="250" cy="70" r="20" fill="#1e40af"/>
+                            <circle cx="250" cy="170" r="20" fill="#1e40af"/>
+                            <path d="M 250 90 L 270 50 M 250 150 L 270 190" stroke="#60a5fa" stroke-width="8" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <div class="product-content">
                         <h3>Prothèse de Bras Modulaire</h3>
                         <p>Système modulaire pour une dextérité maximum et une adaptation parfaite.</p>
@@ -599,7 +644,23 @@
                 
                 <!-- Prothèse de Pied -->
                 <div class="product-card">
-                    <div class="product-image">👣</div>
+                    <div class="product-image">
+                        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="footGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#dbeafe;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#93c5fd;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="300" height="300" fill="url(#footGrad)"/>
+                            <circle cx="150" cy="100" r="28" fill="#1e40af" opacity="0.3"/>
+                            <path d="M 150 130 Q 140 180 120 240" stroke="#1e40af" stroke-width="30" fill="none" stroke-linecap="round"/>
+                            <path d="M 150 130 Q 160 180 180 240" stroke="#3b82f6" stroke-width="30" fill="none" stroke-linecap="round"/>
+                            <ellipse cx="120" cy="250" rx="28" ry="18" fill="#1e40af"/>
+                            <ellipse cx="180" cy="250" rx="28" ry="18" fill="#1e40af"/>
+                            <path d="M 100 260 L 90 280 M 140 260 L 140 280 M 180 260 L 190 280" stroke="#60a5fa" stroke-width="6" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <div class="product-content">
                         <h3>Prothèse de Pied Toutes Terrains</h3>
                         <p>Conception optimisée pour tous les terrains et tous les styles de vie actifs.</p>
@@ -614,7 +675,24 @@
                 
                 <!-- Prothèse Vertébrale -->
                 <div class="product-card">
-                    <div class="product-image">🦴</div>
+                    <div class="product-image">
+                        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="spineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#dbeafe;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#93c5fd;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="300" height="300" fill="url(#spineGrad)"/>
+                            <circle cx="150" cy="60" r="22" fill="#1e40af"/>
+                            <circle cx="150" cy="105" r="22" fill="#1e40af"/>
+                            <circle cx="150" cy="150" r="22" fill="#1e40af"/>
+                            <circle cx="150" cy="195" r="22" fill="#1e40af"/>
+                            <circle cx="150" cy="240" r="22" fill="#1e40af"/>
+                            <path d="M 120 60 L 100 45 M 180 60 L 200 45 M 120 105 L 85 100 M 180 105 L 215 100 M 120 150 L 70 155 M 180 150 L 230 155 M 120 195 L 85 210 M 180 195 L 215 210" stroke="#3b82f6" stroke-width="8" stroke-linecap="round" opacity="0.6"/>
+                            <rect x="130" y="50" width="40" height="200" rx="20" fill="#60a5fa" opacity="0.2"/>
+                        </svg>
+                    </div>
                     <div class="product-content">
                         <h3>Système Vertébral Stabilisant</h3>
                         <p>Solution complète pour la stabilité et le confort dorsal optimal.</p>
