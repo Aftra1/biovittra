@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Biovittra - Prothèses innovantes et de haute qualité. Solutions orthopédiques avancées pour votre mobilité.">
-    <meta name="keywords" content="prothèses, orthopédie, mobilité, santé, innovation">
-    <meta name="theme-color" content="#1e40af">
+    <meta name="description" content="Biovittra - Prothèses innovantes et de haute qualité. Solutions orthopédiques avancées pour votre mobilité et votre qualité de vie.">
+    <meta name="keywords" content="prothèses, orthopédie, mobilité, santé, innovation, réhabilitation">
+    <meta name="theme-color" content="#0f172a">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Biovittra - Prothèses Innovantes">
     <meta property="og:description" content="Solutions orthopédiques avancées pour améliorer votre qualité de vie.">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Biovittra">
     
-    <title>Biovittra - Prothèses Innovantes | Solutions Orthopédiques</title>
+    <title>Biovittra - Solutions Orthopédiques Innovantes</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%230f172a'>🏥</text></svg>">
+    
     <style>
         * {
             margin: 0;
@@ -22,23 +23,25 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #1f2937;
+            background: #ffffff;
         }
         
+        /* Header & Navigation */
         header {
-            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
             color: white;
-            padding: 20px 0;
+            padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -51,384 +54,712 @@
         
         .logo {
             font-size: 28px;
-            font-weight: bold;
-            letter-spacing: 2px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            background: linear-gradient(135deg, #60a5fa, #93c5fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         nav ul {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 40px;
+            align-items: center;
         }
         
         nav a {
             color: white;
             text-decoration: none;
-            transition: opacity 0.3s;
+            font-weight: 500;
+            transition: opacity 0.3s, border-bottom 0.3s;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 5px;
         }
         
         nav a:hover {
-            opacity: 0.8;
+            border-bottom: 2px solid #60a5fa;
+            opacity: 1;
         }
         
+        .cta-btn {
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            padding: 10px 25px;
+            border-radius: 6px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(220,38,38,0.3);
+        }
+        
+        /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
             color: white;
-            padding: 100px 0;
+            padding: 120px 0;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(96,165,250,0.2), transparent);
+            border-radius: 50%;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
         }
         
         .hero h1 {
-            font-size: 48px;
+            font-size: 56px;
             margin-bottom: 20px;
-            animation: fadeInDown 0.8s ease;
+            font-weight: 800;
+            line-height: 1.2;
+            animation: fadeInUp 0.8s ease;
         }
         
-        .hero p {
+        .hero-subtitle {
             font-size: 20px;
-            margin-bottom: 30px;
-            opacity: 0.9;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .btn {
             display: inline-block;
-            padding: 12px 30px;
-            background: #dc2626;
+            padding: 14px 40px;
+            background: linear-gradient(135deg, #dc2626, #991b1b);
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
+            border-radius: 8px;
+            transition: all 0.3s;
             border: none;
             cursor: pointer;
             font-size: 16px;
+            font-weight: 600;
+            margin: 10px;
         }
         
         .btn:hover {
-            background: #b91c1c;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(220,38,38,0.4);
         }
         
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #0f172a;
+        }
+        
+        /* Sections */
         section {
-            padding: 60px 0;
+            padding: 100px 0;
         }
         
-        .about, .contact {
-            background: #f9fafb;
+        .alt-bg {
+            background: #f8fafc;
         }
         
         h2 {
-            font-size: 36px;
-            margin-bottom: 30px;
-            color: #1e40af;
+            font-size: 42px;
+            margin-bottom: 50px;
+            color: #0f172a;
             text-align: center;
+            font-weight: 800;
         }
         
-        .about-content {
+        /* About Section */
+        .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
+            gap: 60px;
             align-items: center;
         }
         
+        .about-image {
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+            height: 400px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 150px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
         .about-text h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: #1e40af;
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #0f172a;
         }
         
         .about-text p {
-            margin-bottom: 15px;
-            color: #555;
+            margin-bottom: 20px;
+            color: #4b5563;
+            font-size: 16px;
             line-height: 1.8;
         }
         
-        .products {
+        .stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
             margin-top: 40px;
+        }
+        
+        .stat {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        
+        .stat-number {
+            font-size: 36px;
+            font-weight: 800;
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: #6b7280;
+            font-size: 14px;
+        }
+        
+        /* Products Section */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
         }
         
         .product-card {
             background: white;
-            border-radius: 8px;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             transition: transform 0.3s, box-shadow 0.3s;
         }
         
         .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
         
-        .product-icon {
-            font-size: 50px;
-            margin-bottom: 20px;
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+        }
+        
+        .product-content {
+            padding: 30px;
         }
         
         .product-card h3 {
-            font-size: 20px;
+            font-size: 22px;
             margin-bottom: 15px;
-            color: #1e40af;
+            color: #0f172a;
         }
         
         .product-card p {
-            color: #666;
+            color: #6b7280;
+            margin-bottom: 20px;
             line-height: 1.6;
         }
         
-        .advantages {
+        .product-features {
+            list-style: none;
+            font-size: 14px;
+            color: #4b5563;
+        }
+        
+        .product-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .product-features li:before {
+            content: "✓ ";
+            color: #dc2626;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        /* Features/Advantages */
+        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
-            margin-top: 40px;
+            margin-top: 60px;
         }
         
-        .advantage-item {
-            padding: 25px;
+        .feature-box {
+            padding: 40px 30px;
             background: white;
-            border-left: 4px solid #dc2626;
-            border-radius: 4px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            border-left: 5px solid #dc2626;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
         }
         
-        .advantage-item h3 {
+        .feature-box:hover {
+            transform: translateX(5px);
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .feature-box h3 {
             font-size: 18px;
-            margin-bottom: 10px;
-            color: #1e40af;
+            margin-bottom: 12px;
+            color: #0f172a;
+        }
+        
+        .feature-box p {
+            color: #6b7280;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
         }
         
         .contact-form {
-            max-width: 600px;
-            margin: 40px auto;
             background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
         }
         
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         
         .form-group label {
             display: block;
-            margin-bottom: 8px;
-            color: #333;
-            font-weight: 500;
+            margin-bottom: 10px;
+            color: #0f172a;
+            font-weight: 600;
+            font-size: 15px;
         }
         
         .form-group input,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            padding: 12px 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 6px;
             font-family: inherit;
-            font-size: 14px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #1e40af;
+            box-shadow: 0 0 0 3px rgba(30,64,175,0.1);
         }
         
         .form-group textarea {
             resize: vertical;
-            min-height: 120px;
+            min-height: 130px;
         }
         
+        /* Footer */
         footer {
-            background: #1e40af;
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
             color: white;
+            padding: 60px 0 20px;
+            border-top: 3px solid rgba(255,255,255,0.1);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h4 {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 14px;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
             text-align: center;
-            padding: 30px 0;
-            margin-top: 60px;
         }
         
-        @media (max-width: 768px) {
-            nav ul {
-                gap: 15px;
-            }
-            
-            .hero h1 {
-                font-size: 36px;
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            h2 {
-                font-size: 28px;
-            }
+        .disclaimer-box {
+            background: rgba(251,191,36,0.1);
+            border-left: 4px solid #fbbf24;
+            padding: 25px;
+            border-radius: 6px;
+            margin-top: 30px;
         }
         
-        @keyframes fadeInDown {
+        .disclaimer-box p {
+            font-size: 13px;
+            opacity: 0.95;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(-20px);
+                transform: translateY(30px);
             }
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .about-grid, .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            h2 {
+                font-size: 32px;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form {
+                padding: 30px 20px;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <nav class="container">
             <div class="logo">BIOVITTRA</div>
             <ul>
-                <li><a href="#about">À propos</a></li>
+                <li><a href="#about">Entreprise</a></li>
                 <li><a href="#products">Produits</a></li>
-                <li><a href="#advantages">Avantages</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#features">Avantages</a></li>
+                <li><a href="#contact" class="cta-btn">Contact</a></li>
             </ul>
         </nav>
     </header>
     
+    <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <h1>Prothèses Innovantes</h1>
-            <p>Solutions orthopédiques avancées pour améliorer votre qualité de vie</p>
-            <a href="#contact" class="btn">Demander un devis</a>
+            <div class="hero-content">
+                <h1>Solutions Orthopédiques de Nouvelle Génération</h1>
+                <p class="hero-subtitle">Prothèses innovantes conçues pour redonner liberté et confiance à chaque patient. Excellence médicale et technologie avancée.</p>
+                <div>
+                    <a href="#contact" class="btn">Demander une consultation</a>
+                    <a href="#products" class="btn btn-secondary">Découvrir nos produits</a>
+                </div>
+            </div>
         </div>
     </section>
     
-    <section id="about" class="about">
+    <!-- About -->
+    <section id="about" class="alt-bg">
         <div class="container">
             <h2>À propos de Biovittra</h2>
-            <div class="about-content">
+            <div class="about-grid">
+                <div class="about-image">🏥</div>
                 <div class="about-text">
-                    <h3>Votre partenaire en mobilité</h3>
-                    <p>Depuis 2010, Biovittra est leader dans la conception et la fabrication de prothèses de haute qualité. Nous nous engageons à offrir des solutions innovantes qui redonnent confiance et liberté de mouvement.</p>
-                    <p>Notre équipe d'experts travaille en étroite collaboration avec les patients et les professionnels de santé pour créer des prothèses adaptées à chaque besoin.</p>
-                    <p>Qualité, innovation et service client sont les piliers de notre entreprise.</p>
+                    <h3>Pionniers de l'Innovation Orthopédique</h3>
+                    <p>Depuis 2010, Biovittra s'engage à développer des solutions orthopédiques de pointe qui transforment la vie de nos patients. Notre équipe multidisciplinaire associe ingénieurs biomédicaux, médecins et technologues pour créer des prothèses révolutionnaires.</p>
+                    <p>Nous croyons que chaque patient mérite une solution personnalisée, confortable et durable. Grâce à la recherche continue et aux partenariats avec les meilleurs centres médicaux, nous repoussons constamment les limites de ce qui est possible.</p>
+                    
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number">15K+</div>
+                            <div class="stat-label">Patients satisfaits</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">25+</div>
+                            <div class="stat-label">Années d'expertise</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Satisfaction client</div>
+                        </div>
+                    </div>
                 </div>
-                <div style="text-align: center; font-size: 80px;">🏥</div>
             </div>
         </div>
     </section>
     
+    <!-- Products -->
     <section id="products">
         <div class="container">
-            <h2>Nos Produits</h2>
-            <div class="products">
+            <h2>Nos Solutions Innovantes</h2>
+            <div class="products-grid">
+                <!-- Prothèse de Jambe -->
                 <div class="product-card">
-                    <div class="product-icon">🦵</div>
-                    <h3>Prothèse de Jambe</h3>
-                    <p>Légère, durable et confortable. Conçue pour la marche quotidienne et les activités sportives.</p>
+                    <div class="product-image">🦵</div>
+                    <div class="product-content">
+                        <h3>Prothèse de Jambe Avancée</h3>
+                        <p>Technologie biomécanique dernière génération pour une marche naturelle et fluide.</p>
+                        <ul class="product-features">
+                            <li>Poids ultra-léger (300g)</li>
+                            <li>Articulation intelligente</li>
+                            <li>Adaptation auto-progressive</li>
+                            <li>Durabilité garantie 10 ans</li>
+                        </ul>
+                    </div>
                 </div>
+                
+                <!-- Prothèse de Bras -->
                 <div class="product-card">
-                    <div class="product-icon">💪</div>
-                    <h3>Prothèse de Bras</h3>
-                    <p>Articulations précises et mouvement naturel. Permet une préhension fine et contrôlée.</p>
+                    <div class="product-image">💪</div>
+                    <div class="product-content">
+                        <h3>Prothèse de Bras Modulaire</h3>
+                        <p>Système modulaire pour une dextérité maximum et une adaptation parfaite.</p>
+                        <ul class="product-features">
+                            <li>Mobilité 360° complète</li>
+                            <li>Préhension fine et puissante</li>
+                            <li>Interface myoélectrique</li>
+                            <li>Batterie 48h d'autonomie</li>
+                        </ul>
+                    </div>
                 </div>
+                
+                <!-- Prothèse de Pied -->
                 <div class="product-card">
-                    <div class="product-icon">👣</div>
-                    <h3>Prothèse de Pied</h3>
-                    <p>Technologie avancée pour une démarche naturelle. Adaptée à tous types de terrain.</p>
+                    <div class="product-image">👣</div>
+                    <div class="product-content">
+                        <h3>Prothèse de Pied Toutes Terrains</h3>
+                        <p>Conception optimisée pour tous les terrains et tous les styles de vie actifs.</p>
+                        <ul class="product-features">
+                            <li>Absorption de chocs avancée</li>
+                            <li>Résistant aux intempéries</li>
+                            <li>Compatible avec chaussures</li>
+                            <li>Maintenance minimale</li>
+                        </ul>
+                    </div>
                 </div>
+                
+                <!-- Prothèse Vertébrale -->
                 <div class="product-card">
-                    <div class="product-icon">🦴</div>
-                    <h3>Prothèse Vertébrale</h3>
-                    <p>Support dorsal innovant. Restaure la stabilité et réduit les douleurs chroniques.</p>
+                    <div class="product-image">🦴</div>
+                    <div class="product-content">
+                        <h3>Système Vertébral Stabilisant</h3>
+                        <p>Solution complète pour la stabilité et le confort dorsal optimal.</p>
+                        <ul class="product-features">
+                            <li>Support lombaire renforcé</li>
+                            <li>Réduction douleur prouvée</li>
+                            <li>Mobilité préservée</li>
+                            <li>Suivi médical inclus</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <section id="advantages" class="about">
+    <!-- Features -->
+    <section id="features" class="alt-bg">
         <div class="container">
-            <h2>Pourquoi choisir Biovittra ?</h2>
-            <div class="advantages">
-                <div class="advantage-item">
-                    <h3>✓ Technologie de pointe</h3>
-                    <p>Matériaux premium et technologies dernier cri pour votre confort.</p>
+            <h2>Pourquoi Choisir Biovittra ?</h2>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">🔬</div>
+                    <h3>Recherche Avancée</h3>
+                    <p>Investissement continu en R&D pour des solutions toujours plus efficaces et durables.</p>
                 </div>
-                <div class="advantage-item">
-                    <h3>✓ Service client 24/7</h3>
-                    <p>Équipe dédiée prête à vous aider à tout moment.</p>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Technologie de Pointe</h3>
+                    <p>Matériaux premium et composants haute-performance provenant des leaders mondiaux.</p>
                 </div>
-                <div class="advantage-item">
-                    <h3>✓ Garantie 5 ans</h3>
-                    <p>Protection complète de votre investissement en qualité.</p>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">👨‍⚕️</div>
+                    <h3>Expertise Médicale</h3>
+                    <p>Équipe de professionnels certifiés et expérimentés dans le domaine orthopédique.</p>
                 </div>
-                <div class="advantage-item">
-                    <h3>✓ Adapté à vos besoins</h3>
-                    <p>Solutions personnalisées pour chaque patient.</p>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">💝</div>
+                    <h3>Service Client 24/7</h3>
+                    <p>Support technique et assistance personnalisée disponibles à tout moment.</p>
                 </div>
-                <div class="advantage-item">
-                    <h3>✓ Livraison rapide</h3>
-                    <p>Livraison en 5-7 jours partout en France.</p>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Garantie 10 ans</h3>
+                    <p>Protection complète de votre investissement avec assistance incluse.</p>
                 </div>
-                <div class="advantage-item">
-                    <h3>✓ Suivi médical</h3>
-                    <p>Accompagnement complet par nos experts.</p>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Livraison Rapide</h3>
+                    <p>Livraison en 3-5 jours ouvrables avec suivi et installation professionnelle.</p>
                 </div>
             </div>
         </div>
     </section>
     
+    <!-- Contact -->
     <section id="contact">
         <div class="container">
-            <h2>Nous Contacter</h2>
-            <div class="contact-form">
-                <form>
-                    <div class="form-group">
-                        <label for="name">Nom complet</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Téléphone</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Envoyer</button>
-                </form>
+            <h2>Demander une Consultation</h2>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Adresse email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="product">Produit intéressé *</label>
+                            <select id="product" name="product" required>
+                                <option value="">Sélectionnez un produit</option>
+                                <option value="leg">Prothèse de Jambe</option>
+                                <option value="arm">Prothèse de Bras</option>
+                                <option value="foot">Prothèse de Pied</option>
+                                <option value="spine">Prothèse Vertébrale</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width: 100%; margin: 0;">Envoyer ma demande</button>
+                    </form>
+                </div>
             </div>
-            <p style="text-align: center; margin-top: 30px; color: #666;">
-                📞 +33 1 23 45 67 89 | 📧 contact@biovittra.fr
-            </p>
         </div>
     </section>
     
-    
-    <script>
-        // Smooth scroll pour les liens
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-        
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Merci pour votre message ! Nous vous répondrons dans les 24h.');
-            this.reset();
-        });
-    </script>
-</body>
-</html>
-    
-    <footer style="border-top: 3px solid rgba(255,255,255,0.3); padding-top: 30px; margin-top: 60px;">
+    <!-- Footer -->
+    <footer>
         <div class="container">
-            <p style="margin-bottom: 10px; font-size: 14px;">&copy; 2026 Biovittra. Tous droits réservés.</p>
-            <p style="margin-bottom: 20px; font-size: 13px;">Solutions orthopédiques innovantes | Qualité & Innovation</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Biovittra</h4>
+                    <ul>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#products">Produits</a></li>
+                        <li><a href="#features">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Ressources</h4>
+                    <ul>
+                        <li><a href="#">Blog médical</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Téléchargements</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📞 +33 (0)1 23 45 67 89</li>
+                        <li>📧 contact@biovittra.fr</li>
+                        <li>📍 75001 Paris, France</li>
+                        <li>⏰ Lun-Ven: 08h-18h</li>
+                    </ul>
+                </div>
+            </div>
             
-            <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 20px; margin-top: 20px;">
-                <div style="background: rgba(255,255,255,0.05); padding: 15px; border-left: 4px solid #fbbf24; border-radius: 4px;">
-                    <p style="font-size: 12px; opacity: 0.9; line-height: 1.6;">
+            <div class="footer-bottom">
+                <p style="margin-bottom: 20px;">&copy; 2026 Biovittra. Tous droits réservés.</p>
+                
+                <div class="disclaimer-box">
+                    <p>
                         <strong>⚠️ AVIS IMPORTANT :</strong> Ce site et l'entreprise Biovittra sont entièrement <strong>fictifs</strong> et créés à titre de démonstration/exemple uniquement. 
                         Aucun produit, service ou entreprise réelle portant ce nom n'existe. 
                         Ce contenu est généré à des fins éducatives et de présentation web.
@@ -439,13 +770,13 @@
     </footer>
     
     <script>
-        // Smooth scroll pour les liens
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
@@ -453,8 +784,27 @@
         // Form submission
         document.querySelector('form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Merci pour votre message ! Nous vous répondrons dans les 24h.');
+            alert('Merci pour votre demande ! Notre équipe vous contactera dans les 24h.');
             this.reset();
+        });
+        
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.product-card, .feature-box').forEach(el => {
+            observer.observe(el);
         });
     </script>
 </body>
